@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euf -o pipefail
 
 rm -rf build
 mkdir -p build
@@ -12,5 +13,6 @@ do
     continue
   fi
 
-  GOOS=$os GOARCH=$arch go build -o "build/choirpack-$os-$arch" -v .
+  GOOS=$os GOARCH=$arch go build -o "build/choirpack-$os-$arch" .
+  echo "Built successfully for $os/$arch"
 done
