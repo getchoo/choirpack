@@ -3,5 +3,5 @@
 .vscode/
 .idea/
 
-/test
-/choirpack
+/test/
+/build/
